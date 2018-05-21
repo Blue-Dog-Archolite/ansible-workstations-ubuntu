@@ -1,0 +1,29 @@
+---
+- import_playbook: apt-repos.yml
+
+- hosts: workstations
+  become: yes
+  tasks:
+    - name: manually update apt-key until bus is fixed
+      shell: apt-get update
+      become: yes
+    - name: Apt Installs
+      apt: name={{item}} state=present
+      with_items:
+        - apt-transport-https
+        - build-essential
+        - ca-certificates
+        - ctags
+        - curl
+        - docker-ce
+        - fonts-powerline
+        - git
+        - gkrellm
+        - gnome-do
+        - google-chrome-stable
+        - kdiff3
+        - neovim
+        - software-properties-common
+        - vim
+        - virtualbox
+        - virtualbox-ext-pack 

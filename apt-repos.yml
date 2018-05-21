@@ -1,10 +1,28 @@
 - hosts: workstations
-  become: sudo
+  become: yes
   tasks:
+    - name: Adding Chrome Key
+      become: yes
+      apt_key:
+        url: https://dl.google.com/linux/linux_signing_key.pub
+        state: present
+
+    - name: Add Docker Key
+      become: yes
+      apt_key:
+        url: https://download.docker.com/linux/ubuntu/gpg 
+        state: present
+
     - apt_repository:
         repo: deb http://dl.google.com/linux/chrome/deb/ stable main
         state: present
         filename: google-chrome
+        update_cache: yes
+
+    - apt_repository:
+        repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ansible_distribution_release}} stable
+        state: present
+        filename: docker-stable
         update_cache: yes
 
     - apt_repository:
