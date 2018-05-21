@@ -1,0 +1,5 @@
+tasks:
+  - name: NeoVim Install
+    apt_repository:
+      repo: ppa:neovim-ppa/stable
+      filename: neovim-stable

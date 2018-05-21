@@ -1,0 +1,14 @@
+- hosts: workstations
+  become: sudo
+  tasks:
+    - apt_repository:
+        repo: deb http://dl.google.com/linux/chrome/deb/ stable main
+        state: present
+        filename: google-chrome
+        update_cache: yes
+
+    - apt_repository:
+        repo: ppa:neovim-ppa/stable
+        filename: neovim-stable
+        state: present
+        update_cache: yes
