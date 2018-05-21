@@ -13,20 +13,37 @@
         url: https://download.docker.com/linux/ubuntu/gpg 
         state: present
 
-    - apt_repository:
-        repo: deb http://dl.google.com/linux/chrome/deb/ stable main
-        state: present
-        filename: google-chrome
-        update_cache: yes
+    - name: Add Chrome Stable
+      apt_repository:
+          repo: deb http://dl.google.com/linux/chrome/deb/ stable main
+          state: present
+          filename: google-chrome
+          update_cache: yes
 
-    - apt_repository:
+    - name: Add Docker Stable
+      apt_repository:
         repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ansible_distribution_release}} stable
         state: present
         filename: docker-stable
         update_cache: yes
 
-    - apt_repository:
+    - name: Add NeoVim Stable
+      apt_repository:
         repo: ppa:neovim-ppa/stable
         filename: neovim-stable
+        state: present
+        update_cache: yes
+
+    - name: Add RVM Stable
+      apt_repository:
+        repo: ppa:rael-gc/rvm
+        filename: rvm-stable 
+        state: present
+        update_cache: yes
+
+    - name: Add VLC Stable
+      apt_repository:
+        repo: ppa:videolan/stable-daily
+        filename: vlc-stable 
         state: present
         update_cache: yes

@@ -1,0 +1,26 @@
+- hosts: workstations
+  become: no
+  tasks:
+
+    - name: Root install of Homesick
+      become: yes
+      shell: "gem install {{ item }}"
+      with_items:
+         - homesick
+         - neovim
+         - tmuxinator
+
+    - name: Clone and Link Homesick
+      shell: "{{ item }}"
+      with_items:
+         - homesick clone Blue-Dog-Archolite/homestick-dot-files
+         - homesick link homestick-dot-files --force
+
+    - name: Clone powerline-shell
+      git:
+        repo: https://github.com/b-ryan/powerline-shell
+        dest: "{{ansible_env.HOME}}/tools/powerline-shell"
+        update: yes
+
+    - name: Install Powerline Shell
+      shell: chdir="{{ansible_env.HOME}}/tools/powerline-shell" python setup.py install

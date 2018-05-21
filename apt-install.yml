@@ -5,8 +5,9 @@
   become: yes
   tasks:
     - name: manually update apt-key until bus is fixed
-      shell: apt-get update
+      shell: apt update
       become: yes
+
     - name: Apt Installs
       apt: name={{item}} state=present
       with_items:
@@ -21,9 +22,22 @@
         - gkrellm
         - gnome-do
         - google-chrome-stable
+        - htop
         - kdiff3
         - neovim
+        - pulseaudio
+        - python-dev 
+        - python-pip
+        - python3-dev
+        - python3-pip
+        - python3-setuptools
+        - rhythmbox
+        - rvm
+        - snapd
+        - snapd-xdg-open
         - software-properties-common
+        - thefuck
         - vim
         - virtualbox
         - virtualbox-ext-pack 
+        - vlc
