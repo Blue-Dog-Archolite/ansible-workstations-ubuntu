@@ -19,3 +19,4 @@
         - rbenv-gemset
         - ruby-build
         - z
+        - ripgrep
