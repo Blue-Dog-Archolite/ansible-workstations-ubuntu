@@ -3,3 +3,4 @@
 - import_playbook: snap-install.yml
 - import_playbook: gem-installs.yml
 - import_playbook: download-and-install.yml
+- import_playbook: ugly-hacks.yml

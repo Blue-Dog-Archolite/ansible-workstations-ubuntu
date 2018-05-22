@@ -1,9 +1,0 @@
-- hosts: workstations
-  become: no
-  tasks:
-
-    - name: Install Linux Brew
-      shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
-
-    - name: Install FZF
-      shell: brew install fzf

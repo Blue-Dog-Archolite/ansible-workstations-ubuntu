@@ -24,7 +24,9 @@
         - google-chrome-stable
         - htop
         - kdiff3
+        - linuxbrew-wrapper
         - neovim
+        - nodejs
         - pulseaudio
         - python-dev 
         - python-pip
@@ -32,7 +34,7 @@
         - python3-pip
         - python3-setuptools
         - rhythmbox
-        - rvm
+        - rbenv
         - snapd
         - snapd-xdg-open
         - software-properties-common
