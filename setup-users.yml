@@ -11,6 +11,11 @@
       name: rvm
       state: present
 
+  - name: Create VirtualBoxUsers Group
+    group:
+      name: vboxusers
+      state: present
+
   - name: "Update uesrs to have 4096 key and rvm group"
     user:
       name: "{{ansible_user_id}}"
@@ -18,6 +23,4 @@
       ssh_key_bits: 4096
       ssh_key_file: .ssh/id_rsa
       append: yes
-      groups: 
-        - docker
-        - rvm
+      groups: docker,rvm,disk,vboxusers

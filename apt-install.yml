@@ -42,6 +42,7 @@
         - snapd
         - snapd-xdg-open
         - software-properties-common
+        - sysstat
         - thefuck
         - tmux
         - vim

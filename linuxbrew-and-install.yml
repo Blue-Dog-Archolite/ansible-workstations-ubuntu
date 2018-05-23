@@ -2,21 +2,20 @@
   become: no
   tasks:
 
-    # - name: Download Linux Brew
-    #   get_url: 
-    #     url: https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh
-    #     dest: "{{ansible_env.HOME}}/tools/linux-brew.sh"
-
-    # - name: Install Linux Brew
-    #   shell: "sh {{ansible_env.HOME}}/tools/linux-brew.sh"
+    - name: Download Linux Brew
+      git:
+        repo: 'https://github.com/Linuxbrew/brew.git'
+        dest: "{{ansible_env.HOME}}/.linuxbrew/"
+        update: yes
 
     - name: Install LinuxBrew items
-      shell: brew install {{item}}
+      shell: "{{ansible_env.HOME}}/.linuxbrew/bin/brew install {{item}}"
       with_items:
+
         - fzf
         - gcc
         - rbenv
         - rbenv-gemset
+        - ripgrep
         - ruby-build
         - z
-        - ripgrep
