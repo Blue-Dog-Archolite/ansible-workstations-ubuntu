@@ -1,0 +1,8 @@
+- hosts: workstations
+  become: no
+  tasks:
+
+    - name: Download tmux manager
+      git:
+        repo: 'https://github.com/tmux-plugins/tpm'
+        dest: "{{ansible_env.HOME}}/.tmux/plugins/tpm"

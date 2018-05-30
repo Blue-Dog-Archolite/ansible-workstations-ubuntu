@@ -10,6 +10,8 @@
 
     - name: Install LinuxBrew items
       shell: "{{ansible_env.HOME}}/.linuxbrew/bin/brew install {{item}}"
+      async: 2400
+      poll: 5
       with_items:
 
         - fzf

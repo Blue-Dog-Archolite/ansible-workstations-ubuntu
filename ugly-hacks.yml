@@ -1,6 +1,0 @@
-- hosts: workstations
-  become: yes
-  tasks:
-    - name: update npm
-      shell: npm install npm --global
-      become: yes

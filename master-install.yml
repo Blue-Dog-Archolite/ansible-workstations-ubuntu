@@ -4,4 +4,4 @@
 - import_playbook: linuxbrew-and-install.yml
 - import_playbook: gem-installs.yml
 - import_playbook: tmux-and-install.yml
-- import_playbook: ugly-hacks.yml
+- import_playbook: node-install.yml

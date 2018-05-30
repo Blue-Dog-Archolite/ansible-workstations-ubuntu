@@ -24,3 +24,4 @@
 
     - name: Install Powerline Shell
       shell: chdir="{{ansible_env.HOME}}/tools/powerline-shell" python setup.py install
+      become: yes

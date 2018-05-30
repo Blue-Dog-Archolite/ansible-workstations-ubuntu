@@ -3,5 +3,9 @@
   tasks:
     - name: Install Slack via Snap
       command: snap install slack --classic
+
     - name: Install Hiri via Snap
       command: snap install hiri
+
+    - name: Install VLC
+      command: snap install vlc

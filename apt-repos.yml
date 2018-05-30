@@ -15,7 +15,7 @@
 
     - name: Add Chrome Stable
       apt_repository:
-          repo: deb http://dl.google.com/linux/chrome/deb/ stable main
+          repo: deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
           state: present
           filename: google-chrome
           update_cache: yes
@@ -40,13 +40,3 @@
         filename: rvm-stable 
         state: present
         update_cache: yes
-
-    - name: Add VLC Stable
-      apt_repository:
-        repo: ppa:videolan/stable-daily
-        filename: vlc-stable 
-        state: present
-        update_cache: yes
-
-    - name: Add NodeJS
-      shell: "curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -"

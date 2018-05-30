@@ -1,0 +1,17 @@
+- hosts: workstations
+  tasks:
+
+    - name: Add NodeJS
+      get_url:
+        url: 'https://deb.nodesource.com/setup_6.x'
+        dest: "{{ansible_env.HOME}}/tools/npm_installer.sh"
+
+    - name: Install NodeJS
+      shell: "sh {{ansible_env.HOME}}/tools/npm_installer.sh"
+      become: yes
+
+    # - name: update npm
+    #   shell: npm install npm --global
+    #   become: yes
+
+

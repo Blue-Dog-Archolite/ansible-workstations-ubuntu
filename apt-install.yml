@@ -15,6 +15,8 @@
         - apt-transport-https
         - build-essential
         - ca-certificates
+        - clamav
+        - clamtk
         - ctags
         - curl
         - docker-ce
@@ -23,15 +25,18 @@
         - gkrellm
         - gnome-do
         - google-chrome-stable
+        - gpaste
         - htop
         - kdiff3
+        - libmysqlclient-dev
         - libmysqld-dev
         - libre2-dev
         - linuxbrew-wrapper
+        - mysql-client
         - neovim
         - nodejs
         - pulseaudio
-        - python-dev 
+        - python-dev
         - python-pip
         - python3-dev
         - python3-pip
@@ -39,6 +44,8 @@
         - rbenv
         - redis-server
         - rhythmbox
+        - ruby
+        - ruby-dev
         - snapd
         - snapd-xdg-open
         - software-properties-common
@@ -47,5 +54,4 @@
         - tmux
         - vim
         - virtualbox
-        - virtualbox-ext-pack 
-        - vlc
+        - virtualbox-ext-pack

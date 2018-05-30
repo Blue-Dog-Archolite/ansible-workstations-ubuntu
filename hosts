@@ -1,9 +1,7 @@
 [all]
-192.168.1.130 ansible_user=thief
-192.168.1.115 ansible_user=rmeyer
-192.168.1.114 ansible_user=rmeyer
+192.168.1.130 ansible_user=rmeyer
+127.0.0.1 ansible_user=rmeyer
 
 [workstations]
-192.168.1.130 ansible_user=thief
-192.168.1.115 ansible_user=rmeyer
-192.168.1.114 ansible_user=rmeyer
+192.168.1.130 ansible_user=rmeyer
+127.0.0.1 ansible_user=rmeyer
