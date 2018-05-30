@@ -1,4 +1,4 @@
-- hosts: workstatons
+- hosts: workstations
   become: yes
   tasks:
     - name: Install Slack via Snap
