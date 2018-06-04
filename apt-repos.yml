@@ -13,6 +13,12 @@
         url: https://download.docker.com/linux/ubuntu/gpg 
         state: present
 
+    - name: Add Signal Key
+      become: yes
+      apt_key:
+        url: https://updates.signal.org/desktop/apt/keys.asc
+        state: present
+
     - name: Add Chrome Stable
       apt_repository:
           repo: deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
@@ -22,9 +28,16 @@
 
     - name: Add Docker Stable
       apt_repository:
-        repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ansible_distribution_release}} stable
+        repo: "deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ansible_distribution_release}} stable"
         state: present
         filename: docker-stable
+        update_cache: yes
+
+    - name: Add Signal
+      apt_repository:
+        repo: "deb [arch=amd64] https://updates.signal.org/desktop/apt {{ansible_distribution_release}} main"
+        filename: "signal-{{ansible_distribution_release}}.list"
+        state: present
         update_cache: yes
 
     - name: Add NeoVim Stable

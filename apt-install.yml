@@ -19,7 +19,6 @@
         - clamtk
         - ctags
         - curl
-        - docker-ce
         - fonts-powerline
         - git
         - gkrellm

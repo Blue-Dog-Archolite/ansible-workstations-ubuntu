@@ -25,3 +25,7 @@
     - name: Install Powerline Shell
       shell: chdir="{{ansible_env.HOME}}/tools/powerline-shell" python setup.py install
       become: yes
+
+    - name: Install vim rc
+      shell: "ln -s {{ansible_env.HOME}}/.vimrc {{ansible_env.home}}/.config/nvim/init.vim"
+      become: no

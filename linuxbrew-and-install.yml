@@ -13,11 +13,9 @@
       async: 2400
       poll: 5
       with_items:
-
         - fzf
         - gcc
         - rbenv
         - rbenv-gemset
-        - ripgrep
         - ruby-build
         - z
