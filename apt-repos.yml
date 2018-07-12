@@ -35,8 +35,8 @@
 
     - name: Add Signal
       apt_repository:
-        repo: "deb [arch=amd64] https://updates.signal.org/desktop/apt {{ansible_distribution_release}} main"
-        filename: "signal-{{ansible_distribution_release}}.list"
+        repo: "deb [arch=amd64] https://updates.signal.org/desktop/apt xenial main"
+        filename: "signal-{{ansible_distribution_release}}"
         state: present
         update_cache: yes
 

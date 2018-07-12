@@ -10,8 +10,8 @@
       shell: "sh {{ansible_env.HOME}}/tools/npm_installer.sh"
       become: yes
 
-    # - name: update npm
-    #   shell: npm install npm --global
-    #   become: yes
+    - name: update npm
+      shell: npm install npm --global
+      become: yes
 
 
