@@ -20,6 +20,11 @@
       shell: "dpkg -i {{ansible_env.HOME}}/tools/keybase.deb"
       become: yes
 
+    - name: Install Z
+      get_url:
+        url: "https://raw.githubusercontent.com/rupa/z/master/z.sh"
+        dest: "{{ansible_env.HOME}}/tools/z.sh"
+
     - name: Update and Set Keybase
       shell: "apt-get install -f"
       become: yes

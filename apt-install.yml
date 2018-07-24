@@ -30,6 +30,7 @@
         - kdiff3
         - libmysqlclient-dev
         - libmysqld-dev
+        - libpq-dev
         - libre2-dev
         - linuxbrew-wrapper
         - mysql-client
