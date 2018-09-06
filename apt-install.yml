@@ -25,7 +25,7 @@
         - gkrellm
         - gnome-do
         - google-chrome-stable
-        - gpaste
+        - clipit
         - htop
         - kdiff3
         - libmysqlclient-dev

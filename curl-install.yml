@@ -6,7 +6,6 @@
       get_url:
         url: 'https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh'
         dest: "{{ansible_env.HOME}}/tools/dein_installer.sh"
-        present: yes
 
     - name: Install dein
       shell: "sh {{ansible_env.HOME}}/tools/dein_installer.sh {{ansible_env.HOME}}/tools/dein "
