@@ -47,13 +47,6 @@
         state: present
         update_cache: yes
 
-    - name: Add ClipIt Stable
-      apt_repository:
-        repo: ppa:shantzu/clipit
-        filename: clipit
-        state: present
-        update_cache: yes
-
     - name: Add RVM Stable
       apt_repository:
         repo: ppa:rael-gc/rvm
