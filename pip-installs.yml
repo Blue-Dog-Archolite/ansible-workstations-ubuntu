@@ -6,7 +6,6 @@
       become: yes
       shell: "pip install {{ item }}"
       with_items:
-         - virtualenv
          - pipenv
 
     - name: Clone and Link Homesick
@@ -18,7 +17,7 @@
     - name: Clone powerline-shell
       git:
         repo: https://github.com/b-ryan/powerline-shell
-        dest: "{{ansible_env.HOME}}/tools/powerline-shell"
+        dest: "{{ ansible_env.HOME }}/tools/powerline-shell"
         update: yes
 
     - name: Install Powerline Shell
@@ -26,17 +25,23 @@
       shell: chdir="{{ansible_env.HOME}}/tools/powerline-shell" python setup.py install --user
 
     - name: Create Vim2 PipFile Locations
-      path: "{{ansible_env.HOME}}/tools/vim2"
-      state: directory
-      recurse: yes
+      file:
+        path: "{{ ansible_env.HOME }}/tools/vim2"
+        state: directory
+        recurse: yes
 
     - name: Create Vim3 PipFile Locations
-      path: "{{ansible_env.HOME}}/tools/vim3"
-      state: directory
-      recurse: yes
+      file:
+        path: "{{ ansible_env.HOME }}/tools/vim3"
+        state: directory
+        recurse: yes
 
     - name: Create Vim2
       synchronize:
-        src: ./pipfiles/
-        dest: "{{ansible_env.HOME}}/tools/"
-      delegate_to: delegate.host
+        src: "./pipfiles/vim2/"
+        dest: "{{ ansible_env.HOME }}/tools/vim2/"
+
+    - name: Create Vim3
+      synchronize:
+        src: "./pipfiles/vim3/"
+        dest: "{{ ansible_env.HOME }}/tools/vim3/"

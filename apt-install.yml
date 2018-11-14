@@ -13,8 +13,8 @@
       with_items:
 
         - apt-transport-https
-        - bfs
         - build-essential
+        - fish
         - ca-certificates
         - clamav
         - clamtk
@@ -28,31 +28,20 @@
         - clipit
         - htop
         - kdiff3
-        - libmysqlclient-dev
-        - libmysqld-dev
-        - libpq-dev
-        - libre2-dev
         - linuxbrew-wrapper
-        - mysql-client
         - neovim
-        - nodejs
-        - pulseaudio
         - python-dev
         - python-pip
         - python3-dev
         - python3-pip
         - python3-setuptools
         - rbenv
-        - redis-server
         - rhythmbox
         - ruby
         - ruby-dev
         - snapd
-        - snapd-xdg-open
         - software-properties-common
         - sysstat
         - thefuck
         - tmux
         - vim
-        - virtualbox
-        - virtualbox-ext-pack
