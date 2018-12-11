@@ -9,3 +9,6 @@
 
     - name: Install VLC
       command: snap install vlc
+
+    - name: Install Signal
+      command: snap install signal-desktop
