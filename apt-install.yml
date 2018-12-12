@@ -14,18 +14,19 @@
 
         - apt-transport-https
         - build-essential
-        - fish
         - ca-certificates
         - clamav
         - clamtk
+        - clipit
         - ctags
         - curl
+        - docker-ce
+        - fish
         - fonts-powerline
         - git
         - gkrellm
         - gnome-do
         - google-chrome-stable
-        - clipit
         - htop
         - kdiff3
         - linuxbrew-wrapper
