@@ -1,0 +1,8 @@
+---
+- name: Root install of Homesick
+  become: yes
+  shell: "gem install {{ item }}"
+  with_items:
+     - homesick
+     - neovim
+     - tmuxinator

@@ -1,0 +1,15 @@
+---
+- name: Create Docker Group
+  group:
+    name: docker
+    state: present
+
+- name: Create RVM Group
+  group:
+    name: rvm
+    state: present
+
+- name: Create VirtualBoxUsers Group
+  group:
+    name: vboxusers
+    state: present

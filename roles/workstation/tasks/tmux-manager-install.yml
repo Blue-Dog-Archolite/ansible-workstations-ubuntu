@@ -1,0 +1,5 @@
+---
+- name: Download tmux manager
+  git:
+    repo: 'https://github.com/tmux-plugins/tpm'
+    dest: "{{sharedInstallPath}}/.tmux/plugins/tpm"

@@ -1,0 +1,5 @@
+---
+- name: Install LinuxBrew items
+  homebrew:
+    name: fzf,gcc,rbenv,ruby-build,rbenv-gemset,z,black
+    state: present

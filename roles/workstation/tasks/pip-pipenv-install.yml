@@ -1,0 +1,6 @@
+---
+- name: pip installs
+  become: yes
+  shell: "pip install {{ item }}"
+  with_items:
+     - pipenv

@@ -10,7 +10,7 @@
     - name: Add Docker Key
       become: yes
       apt_key:
-        url: https://download.docker.com/linux/ubuntu/gpg 
+        url: https://download.docker.com/linux/ubuntu/gpg
         state: present
 
     - name: Add Chrome Stable

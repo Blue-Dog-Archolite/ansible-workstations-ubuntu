@@ -1,0 +1,18 @@
+---
+# Install required packages
+- hosts: all
+  gather_facts: False
+
+  pre_tasks:
+    - name: Install python for Ansible
+      raw: test -e /usr/bin/python || (yum -y update && yum install -y python2 python-simplejson)
+      changed_when: False
+
+roles:
+    - {role: 'gui', tags: 'gui'}
+
+
+# Install GUI components
+- hosts: gui
+  roles:
+    - gui
