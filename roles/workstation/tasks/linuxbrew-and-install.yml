@@ -7,7 +7,4 @@
       - black
       - fzf
       - gcc
-      - rbenv
-      - rbenv-gemset
-      - ruby-build
       - z
