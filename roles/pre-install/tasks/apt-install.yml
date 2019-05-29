@@ -3,6 +3,8 @@
   become: yes
   apt:
     upgrade: dist
+    update_cache: yes
+
 
 - name: Apt Installs
   become: yes
