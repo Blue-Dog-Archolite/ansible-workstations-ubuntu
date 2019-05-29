@@ -12,7 +12,7 @@
 # Install for all hosts
 - hosts: all
   roles:
-    - required-packages
+    - pre-install
     - workstation
 
 # Install GUI components

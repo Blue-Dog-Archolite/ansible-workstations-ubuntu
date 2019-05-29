@@ -1,17 +1,15 @@
 ---
-- hosts: workstations
-  become: yes
-  tasks:
-    - name: manually update apt-key until bus is fixed
-      shell: apt update
-      become: yes
+tasks:
+  - name: manually update apt-key until bus is fixed
+    shell: apt update
+    become: yes
 
-    - name: Apt Installs
-      apt:
-        state: present
-        name:
-          - apt-transport-https
-          - ca-certificates
-          - curl
-          - gnupg-agent
-          - software-properties-common
+  - name: Apt Installs
+    apt:
+      state: present
+      name:
+        - apt-transport-https
+        - ca-certificates
+        - curl
+        - gnupg-agent
+        - software-properties-common
