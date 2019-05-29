@@ -5,6 +5,7 @@
     upgrade: dist
 
 - name: Apt Installs
+  become: yes
   apt:
     state: present
     name:
