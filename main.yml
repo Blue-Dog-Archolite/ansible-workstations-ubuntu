@@ -9,6 +9,7 @@
       raw: test -e /usr/bin/python || (apt -y update && apt install -y python2 python-simplejson)
       changed_when: False
 
+# Install for all hosts
 - hosts: all
   roles:
     - required-packages
