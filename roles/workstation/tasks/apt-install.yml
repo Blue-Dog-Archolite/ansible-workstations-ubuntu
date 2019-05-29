@@ -23,8 +23,6 @@
       - htop
       - linuxbrew-wrapper
       - neovim
-      - nodejs
-      - npm
       - python-dev
       - python-pip
       - python3-dev
