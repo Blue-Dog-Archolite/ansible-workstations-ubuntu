@@ -1,16 +1,4 @@
 ---
-- name: manually update apt-key until bus is fixed
-  become: yes
-  apt:
-    upgrade: dist
-
-- name: Apt Installs
-  become: yes
-  apt:
-    state: present
-    name:
-      - apt-transport-https
-      - ca-certificates
-      - curl
-      - gnupg-agent
-      - software-properties-common
+---
+- import_playbook: apt-repos.yml
+- import_playbook: apt-install.yml
