@@ -10,6 +10,7 @@
       changed_when: False
 
     - name: 'Work around install aptitude'
+      become: yes
       raw: sudo apt-get -y install aptitude
 
 # Install for all hosts
