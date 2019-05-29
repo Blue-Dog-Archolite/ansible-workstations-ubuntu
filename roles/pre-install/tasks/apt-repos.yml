@@ -3,11 +3,11 @@
   become: yes
   apt_key:
     url: https://download.docker.com/linux/ubuntu/gpg
-    state: latest
+    state: present
 
 - name: Add Docker
   apt_repository:
       repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable
-      state: latest
+      state: present
       filename: docker-stable
       update_cache: yes
