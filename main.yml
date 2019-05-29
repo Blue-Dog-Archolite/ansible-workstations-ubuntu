@@ -6,7 +6,7 @@
   pre_tasks:
     - name: Install python for Ansible
       become: yes
-      raw: test -e /usr/bin/python || (apt -y update && apt install -y python2 python-simplejson)
+      raw: test -e /usr/bin/python || (apt -y update && apt install -y python2 python-simplejson aptitude)
       changed_when: False
 
 # Install for all hosts
