@@ -9,12 +9,9 @@
       raw: test -e /usr/bin/python || (apt -y update && apt install -y python2 python-simplejson)
       changed_when: False
 
-    - name: Apt https transport install
-      become: yes
-      raw: apt install apt-transport-https -y
-
 - hosts: all
   roles:
+    - required-packages
     - workstation
 
 # Install GUI components
