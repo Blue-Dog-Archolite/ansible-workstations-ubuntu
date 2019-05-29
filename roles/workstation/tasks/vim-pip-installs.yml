@@ -1,31 +1,28 @@
-- hosts: workstations
-  become: no
-  tasks:
+---
+- name: pip installs
+  become: yes
+  shell: "pip install {{ item }}"
+  with_items:
+     - pipenv
 
-    - name: pip installs
-      become: yes
-      shell: "pip install {{ item }}"
-      with_items:
-         - pipenv
+- name: Create Vim2 PipFile Locations
+  file:
+    path: "{{ sharedInstallPath }}/tools/vim2"
+    state: directory
+    recurse: yes
 
-    - name: Create Vim2 PipFile Locations
-      file:
-        path: "{{ sharedInstallPath }}/tools/vim2"
-        state: directory
-        recurse: yes
+- name: Create Vim3 PipFile Locations
+  file:
+    path: "{{ sharedInstallPath }}/tools/vim3"
+    state: directory
+    recurse: yes
 
-    - name: Create Vim3 PipFile Locations
-      file:
-        path: "{{ sharedInstallPath }}/tools/vim3"
-        state: directory
-        recurse: yes
+- name: Create Vim2
+  synchronize:
+    src: "./pipfiles/vim2/"
+    dest: "{{ sharedInstallPath }}/tools/vim2/"
 
-    - name: Create Vim2
-      synchronize:
-        src: "./pipfiles/vim2/"
-        dest: "{{ sharedInstallPath }}/tools/vim2/"
-
-    - name: Create Vim3
-      synchronize:
-        src: "./pipfiles/vim3/"
-        dest: "{{ sharedInstallPath }}/tools/vim3/"
+- name: Create Vim3
+  synchronize:
+    src: "./pipfiles/vim3/"
+    dest: "{{ sharedInstallPath }}/tools/vim3/"

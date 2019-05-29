@@ -1,41 +1,40 @@
 ---
-tasks:
-  - name: manually update apt-key until bus is fixed
-    shell: apt update
-    become: yes
+- name: manually update apt-key until bus is fixed
+  shell: apt update
+  become: yes
 
-  - name: Apt Installs
-    apt:
-      state: present
-      name:
+- name: Apt Installs
+  apt:
+    state: present
+    name:
 
-        - apt-transport-https
-        - build-essential
-        - ca-certificates
-        - clamav
-        - clamtk
-        - ctags
-        - curl
-        - docker-ce
-        - fish
-        - fonts-powerline
-        - git
-        - htop
-        - linuxbrew-wrapper
-        - neovim
-        - nodejs
-        - npm
-        - python-dev
-        - python-pip
-        - python3-dev
-        - python3-pip
-        - python3-setuptools
-        - rbenv
-        - ruby
-        - ruby-dev
-        - snapd
-        - software-properties-common
-        - sysstat
-        - thefuck
-        - tmux
-        - vim
+      - apt-transport-https
+      - build-essential
+      - ca-certificates
+      - clamav
+      - clamtk
+      - ctags
+      - curl
+      - docker-ce
+      - fish
+      - fonts-powerline
+      - git
+      - htop
+      - linuxbrew-wrapper
+      - neovim
+      - nodejs
+      - npm
+      - python-dev
+      - python-pip
+      - python3-dev
+      - python3-pip
+      - python3-setuptools
+      - rbenv
+      - ruby
+      - ruby-dev
+      - snapd
+      - software-properties-common
+      - sysstat
+      - thefuck
+      - tmux
+      - vim
