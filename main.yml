@@ -5,8 +5,13 @@
 
   pre_tasks:
     - name: Install python for Ansible
-      raw: test -e /usr/bin/python || (yum -y update && yum install -y python2 python-simplejson)
+      become: yes
+      raw: test -e /usr/bin/python || (apt -y update && apt install -y python2 python-simplejson)
       changed_when: False
+
+    - name: Apt https transport install
+      become: yes
+      raw: apt install apt-transport-https -y
 
 - hosts: all
   roles:
