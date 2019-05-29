@@ -9,6 +9,8 @@
 
 
 - name: Install Z
+  become: yes
   get_url:
     url: "https://raw.githubusercontent.com/rupa/z/master/z.sh"
     dest: "/usr/local/bin/z.sh"
+    mode: 0111
