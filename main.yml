@@ -6,8 +6,11 @@
   pre_tasks:
     - name: Install python for Ansible
       become: yes
-      raw: test -e /usr/bin/python || (apt -y update && apt install -y python2 python-simplejson aptitude)
+      raw: test -e /usr/bin/python || (apt -y update && apt install -y python2 python-simplejson)
       changed_when: False
+
+    - name: 'Work around install aptitude'
+      raw: sudo apt-get -y install aptitude
 
 # Install for all hosts
 - hosts: all
