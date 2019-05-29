@@ -1,0 +1,5 @@
+---
+- name: Create shared directories
+  file:
+    path: {{ sharedInstallPath }}/tools/
+    state: directory
