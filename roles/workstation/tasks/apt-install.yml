@@ -1,7 +1,9 @@
 ---
+
 - name: manually update apt-key until bus is fixed
-  shell: apt update
   become: yes
+  apt:
+    upgrade: dist
 
 - name: Apt Installs
   become: yes

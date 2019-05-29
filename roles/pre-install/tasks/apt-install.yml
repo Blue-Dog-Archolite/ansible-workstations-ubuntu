@@ -1,5 +1,5 @@
 ---
-- name: manually update apt-key until bus is fixed
+- name: Upgrade Dist with Apt
   become: yes
   apt:
     upgrade: dist
