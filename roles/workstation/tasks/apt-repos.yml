@@ -12,6 +12,7 @@
     state: present
 
 - name: Add Chrome Stable
+  become: yes
   apt_repository:
       repo: deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
       state: present
@@ -19,6 +20,7 @@
       update_cache: yes
 
 - name: Add Docker
+  become: yes
   apt_repository:
       repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable
       state: present
