@@ -1,4 +1,10 @@
 ---
+- name: Add Nodesource Keys
+  become: yes
+  apt_key:
+    url: https://deb.nodesource.com/gpgkey/nodesource.gpg.key
+    state: present
+
 - name: Add Node 12 deb
   become: yes
   apt_repository:
