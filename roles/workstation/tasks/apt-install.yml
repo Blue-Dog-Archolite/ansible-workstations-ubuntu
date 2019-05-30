@@ -25,6 +25,7 @@
       - htop
       - linuxbrew-wrapper
       - neovim
+      - node
       - python-dev
       - python-pip
       - python3-dev
@@ -39,3 +40,4 @@
       - thefuck
       - tmux
       - vim
+      - yarn
