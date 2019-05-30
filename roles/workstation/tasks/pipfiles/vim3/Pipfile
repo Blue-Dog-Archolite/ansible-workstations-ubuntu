@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[dev-packages]
+
+[packages]
+autopep8 = "*"
+flake8 = "*"
+flootty = "*"
+isort = "*"
+jedi = "*"
+neovim = "*"
+pep8 = "*"
+yapf = "*"
+
+[requires]
+python_version = "3.6"

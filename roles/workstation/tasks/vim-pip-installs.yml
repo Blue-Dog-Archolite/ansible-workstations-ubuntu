@@ -11,12 +11,12 @@
     state: directory
     recurse: yes
 
-# - name: Create Vim2
-#   synchronize:
-#     src: "./pipfiles/vim2/"
-#     dest: "{{ sharedInstallPath }}/tools/vim2/"
+- name: Create Vim2
+  synchronize:
+    src: "./pipfiles/vim2/"
+    dest: "{{ sharedInstallPath }}/tools/vim2/"
 
-# - name: Create Vim3
-#   synchronize:
-#     src: "./pipfiles/vim3/"
-#     dest: "{{ sharedInstallPath }}/tools/vim3/"
+- name: Create Vim3
+  synchronize:
+    src: "./pipfiles/vim3/"
+    dest: "{{ sharedInstallPath }}/tools/vim3/"
