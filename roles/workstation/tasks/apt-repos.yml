@@ -4,7 +4,6 @@
   apt_key:
     url: https://deb.nodesource.com/gpgkey/nodesource.gpg.key
     state: present
-    update_cache: yes
 
 - name: Add Node 12 deb
   become: yes
