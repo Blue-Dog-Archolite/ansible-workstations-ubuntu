@@ -12,7 +12,7 @@ sudo apt install python python-pip git -y
 pip install ansible
 
 # verify working directory
-cd ansible-workstations-ubuntu
+# cd ansible-workstations-ubuntu
 
 # Execute workstation install
 ansible-playbook main.yml -i ./hosts -c local
