@@ -10,7 +10,7 @@
 - name: Add Node 12 deb-src
   become: yes
   apt_repository:
-		repo: deb-src https://deb.nodesource.com/node_12.x bionic main<Paste>
+		repo: deb-src https://deb.nodesource.com/node_12.x bionic main
     state: present
     filename: node-12-src
     update_cache: yes
