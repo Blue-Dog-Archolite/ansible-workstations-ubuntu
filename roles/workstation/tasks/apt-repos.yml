@@ -10,15 +10,15 @@
 - name: Add Node 12 deb-src
   become: yes
   apt_repository:
-		repo: deb-src https://deb.nodesource.com/node_12.x bionic main
+    repo: deb-src https://deb.nodesource.com/node_12.x bionic main
     state: present
     filename: node-12-src
     update_cache: yes
 
 - name: Add Yarn deb
-	become: yes
-	apt_repository:
-		repo: deb https://dl.yarnpkg.com/debian/ stable main
-		state: present
-		filename: yarn-deb
-		update_cache: yes
+  become: yes
+  apt_repository:
+    repo: deb https://dl.yarnpkg.com/debian/ stable main
+    state: present
+    filename: yarn-deb
+    update_cache: yes
