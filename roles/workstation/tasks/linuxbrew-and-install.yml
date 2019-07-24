@@ -1,0 +1,11 @@
+---
+- name: Install LinuxBrew items
+  homebrew:
+    state: present
+    name:
+
+      - asdf
+      - black
+      - fzf
+      - gcc
+      - z

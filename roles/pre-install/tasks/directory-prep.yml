@@ -1,0 +1,8 @@
+---
+- name: Create shared directories
+  become: yes
+  file:
+    path: "{{ sharedInstallPath }}/tools/"
+    state: directory
+    mode: 0777
+    recurse: yes

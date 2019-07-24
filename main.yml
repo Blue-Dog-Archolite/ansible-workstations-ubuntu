@@ -1,0 +1,27 @@
+---
+# Install required packages
+- hosts: all
+  gather_facts: False
+
+  pre_tasks:
+    - name: Install python for Ansible
+      become: yes
+      raw: test -e /usr/bin/python || (apt -y update && apt install -y python2 python-simplejson)
+      changed_when: False
+
+    - name: 'Work around install aptitude'
+      become: yes
+      raw: sudo apt-get -y install aptitude
+
+# Install for all hosts
+- hosts: all
+  roles:
+    - pre-install
+    - workstation
+
+# Install GUI components
+- hosts: gui
+  roles:
+    - gui
+  tags:
+    - gui

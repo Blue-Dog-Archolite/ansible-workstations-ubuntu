@@ -1,0 +1,16 @@
+---
+- name: Add Dein
+  get_url:
+    url: 'https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh'
+    dest: "{{ sharedInstallPath }}/tools/dein_installer.sh"
+
+- name: Install dein
+  shell: "sh {{ sharedInstallPath }}/tools/dein_installer.sh {{ sharedInstallPath }}/tools/dein "
+
+
+- name: Install Z
+  become: yes
+  get_url:
+    url: "https://raw.githubusercontent.com/rupa/z/master/z.sh"
+    dest: "/usr/local/bin/z.sh"
+    mode: 0111

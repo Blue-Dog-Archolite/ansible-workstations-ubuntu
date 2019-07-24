@@ -1,0 +1,13 @@
+---
+- name: Root install of Homesick
+  become: yes
+  gem:
+    state: latest
+    name: homesick
+
+- name: Root install of neovim
+  become: yes
+  gem:
+    state: latest
+    name: neovim
+     # - tmuxinator

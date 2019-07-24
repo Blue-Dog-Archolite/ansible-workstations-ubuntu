@@ -1,7 +1,0 @@
-- import_playbook: apt-install.yml
-- import_playbook: curl-install.yml
-- import_playbook: gem-installs.yml
-- import_playbook: pip-installs.yml
-- import_playbook: setup-users.yml
-- import_playbook: snap-install.yml
-- import_playbook: tmux-and-install.yml
