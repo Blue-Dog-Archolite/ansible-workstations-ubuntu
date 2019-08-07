@@ -9,3 +9,6 @@
       - fzf
       - gcc
       - z
+      - pipenv
+      - rbenv
+      - ruby-build

@@ -1,4 +1,8 @@
 ---
-- include_tasks: apt-install.yml
-- include_tasks: apt-repos.yml
-- include_tasks: directory-prep.yml
+- import_tasks: apt-install.yml
+  when: ansible_distribution == "Ubuntu"
+
+- import_tasks: pacman-install.yml
+  when: ansible_distribution == "Archlinux"
+
+- import_tasks: directory-prep.yml

@@ -1,0 +1,38 @@
+---
+- name: Pacman Installs
+  become: yes
+  pacman:
+    state: present
+    name:
+
+      # - apt-transport-https
+      # - ca-certificates
+      # - fonts-powerline
+      # - linuxbrew-git
+      # - python-dev
+      # - rbenv
+      # - ruby-build
+      # - snapd
+      # - software-properties-common
+
+      - base-devel
+      - clamav
+      - clamtk
+      - ctags
+      - curl
+      - fish
+      - git
+      - htop
+      - neovim
+      - nodejs
+      - python-pip
+      - python-setuptools
+      - ruby
+      - sysstat
+      - thefuck
+      - tmux
+      - vim
+      - yarn
+
+
+

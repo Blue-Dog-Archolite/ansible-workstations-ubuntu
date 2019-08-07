@@ -7,7 +7,6 @@
 - name: Install dein
   shell: "sh {{ sharedInstallPath }}/tools/dein_installer.sh {{ sharedInstallPath }}/tools/dein "
 
-
 - name: Install Z
   become: yes
   get_url:

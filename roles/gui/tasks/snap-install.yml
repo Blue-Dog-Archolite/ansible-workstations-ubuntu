@@ -2,6 +2,9 @@
 - name: Install Slack via Snap
   command: snap install slack --classic
 
+- name: Install Postman via Snap
+  command: snap install postman
+
 - name: Install Hiri via Snap
   command: snap install hiri
 

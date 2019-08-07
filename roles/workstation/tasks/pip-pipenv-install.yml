@@ -1,6 +1,0 @@
----
-- name: pip installs
-  become: yes
-  pip:
-    name:
-     - pipenv

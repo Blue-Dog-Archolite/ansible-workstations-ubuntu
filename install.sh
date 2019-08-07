@@ -6,7 +6,7 @@
 # cd ansible-workstations-ubuntu
 
 # install python and git
-sudo apt install python python-pip git -y
+sudo apt install python python-pip git curl -y
 
 # Install ansible
 pip install ansible

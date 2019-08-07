@@ -1,17 +1,34 @@
 ---
 # Install required packages
 - hosts: all
-  gather_facts: False
+  # gather_facts: False
 
   pre_tasks:
     - name: Install python for Ansible
       become: yes
       raw: test -e /usr/bin/python || (apt -y update && apt install -y python2 python-simplejson)
       changed_when: False
+      when: ansible_distribution == "Ubuntu"
+
+    - name: Install python for Ansible
+      become: yes
+      raw: test -e /usr/bin/python || (pacman -Syy && pacman -Sy --noconfirm python python-simplejson)
+      changed_when: False
+      when: ansible_distribution == "Archlinux"
+
+    - name: Update pacman for Archlinux
+      become: yes
+      raw: pacman -Syy
 
     - name: 'Work around install aptitude'
       become: yes
       raw: sudo apt-get -y install aptitude
+      when: ansible_distribution == "Ubuntu"
+
+    # - name: 'Work around install Snap on Arch'
+    #   become: yes
+    #   raw: pacman -Sy --noconfirm snapd
+    #   when: ansible_distribution == "Archlinux"
 
 # Install for all hosts
 - hosts: all
