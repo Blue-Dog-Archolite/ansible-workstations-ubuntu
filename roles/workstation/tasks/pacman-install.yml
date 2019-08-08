@@ -21,6 +21,7 @@
       - clamtk
       - ctags
       - curl
+      - fasd
       - fish
       - git
       - htop
@@ -35,3 +36,4 @@
       - tmux
       - vim
       - yarn
+      - z

@@ -1,4 +1,10 @@
 ---
+- name: Start Snap server < Required if not already set to start on boo>
+  become: yes
+  systemd:
+    state: started
+    name: snapd
+
 - name: Install Slack via Snap
   command: snap install slack --classic
 

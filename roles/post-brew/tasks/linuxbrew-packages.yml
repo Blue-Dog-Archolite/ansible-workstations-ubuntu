@@ -1,8 +1,13 @@
 ---
-# - raw: |
+# - name: Is brew installed
+#   raw: |
 #     hash brew 2> /dev/null
 #   register: brew_installed
 #   ignore_errors: True
+#
+- name: Brew install needs system ruby and gcc
+  raw: |
+    brew vendor-install ruby
 
 - name: Install LinuxBrew items
   # when: brew_installed is True

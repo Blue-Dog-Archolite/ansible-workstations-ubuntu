@@ -25,11 +25,6 @@
       raw: sudo apt-get -y install aptitude
       when: ansible_distribution == "Ubuntu"
 
-    # - name: 'Work around install Snap on Arch'
-    #   become: yes
-    #   raw: pacman -Sy --noconfirm snapd
-    #   when: ansible_distribution == "Archlinux"
-
 # Install for all hosts
 - hosts: all
   roles:
