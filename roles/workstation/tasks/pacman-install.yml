@@ -27,6 +27,7 @@
       - nodejs
       - python-pip
       - python-setuptools
+      - rsync
       - ruby
       - sysstat
       - thefuck

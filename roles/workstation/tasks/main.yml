@@ -10,9 +10,9 @@
 
 - include_tasks: curl-install.yml
 - include_tasks: gem-installs.yml
-- include_tasks: linuxbrew-install.yml
-- include_tasks: linuxbrew-packages.yml
-- include_tasks: pip-pipenv-install.yml
 - include_tasks: tmux-manager-install.yml
 - include_tasks: setup-groups.yml
-- include_tasks: vim-pip-installs.yml
+
+# - include_tasks: linuxbrew-install.yml
+# - include_tasks: linuxbrew-packages.yml
+# - include_tasks: vim-pip-installs.yml

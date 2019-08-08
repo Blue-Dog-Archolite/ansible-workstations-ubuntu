@@ -1,6 +1,7 @@
 ---
 - name: Install LinuxBrew items
   homebrew:
+    path: /home/linuxbrew/.linuxbrew/bin/
     state: present
     name:
 

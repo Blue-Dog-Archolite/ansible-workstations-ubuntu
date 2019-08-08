@@ -1,0 +1,25 @@
+---
+
+- name: Make LinuxBrew directory
+  become: yes
+  file:
+    path: /home/linuxbrew/
+    state: directory
+
+- name: Correct LinuxBrew Permissions
+  become: no
+  raw: |
+    sudo chown -R $(whoami) /home/linuxbrew/
+
+
+- name: Brew Doctor Fixes
+  raw: |
+    sudo mkdir -p /home/linuxbrew/.linuxbrew/etc /home/linuxbrew/.linuxbrew/include /home/linuxbrew/.linuxbrew/lib /home/linuxbrew/.linuxbrew/opt /home/linuxbrew/.linuxbrew/sbin /home/linuxbrew/.linuxbrew/share /home/linuxbrew/.linuxbrew/var/homebrew/linked /home/linuxbrew/.linuxbrew/Cellar
+    sudo chown -R $(whoami) /home/linuxbrew/.linuxbrew/etc /home/linuxbrew/.linuxbrew/include /home/linuxbrew/.linuxbrew/lib /home/linuxbrew/.linuxbrew/opt /home/linuxbrew/.linuxbrew/sbin /home/linuxbrew/.linuxbrew/share /home/linuxbrew/.linuxbrew/var/homebrew/linked /home/linuxbrew/.linuxbrew/Cellar
+
+
+- name: Possible Solution
+  command: |
+    curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C /home/linuxbrew/.linuxbrew/
+  args:
+    chdir: /home/linuxbrew/
