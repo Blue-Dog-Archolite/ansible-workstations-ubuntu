@@ -7,4 +7,3 @@
       - ca-certificates
       - curl
       - gnupg
-      # - software-properties-common

@@ -1,7 +1,12 @@
 ---
+- raw: |
+    hash brew 2> /dev/null
+  register: brew_installed
+  ignore_errors: True
+
 - name: Install LinuxBrew items
+  when: brew_installed is True
   homebrew:
-    path: /home/linuxbrew/.linuxbrew/bin/
     state: present
     name:
 

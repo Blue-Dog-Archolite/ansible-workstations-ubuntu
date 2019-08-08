@@ -2,6 +2,13 @@
 # Install GUI spicific programs
 # Order maters. Install repos before installing packages
 - include_tasks: apt-repos.yml
+  when: ansible_distribution == "Ubuntu"
+
 - include_tasks: apt-gui.yml
+  when: ansible_distribution == "Ubuntu"
+
+- include_tasks: pacman-gui.yml
+  when: ansible_distribution == "Archlinux"
+
 - include_tasks: curl-install.yml
 - include_tasks: snap-install.yml

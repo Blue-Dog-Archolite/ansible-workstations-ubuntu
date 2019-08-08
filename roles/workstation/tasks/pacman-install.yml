@@ -5,6 +5,7 @@
     state: present
     name:
 
+      # Pending needs
       # - apt-transport-https
       # - ca-certificates
       # - fonts-powerline
@@ -34,6 +35,3 @@
       - tmux
       - vim
       - yarn
-
-
-

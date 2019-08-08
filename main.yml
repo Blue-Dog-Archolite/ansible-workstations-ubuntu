@@ -35,6 +35,7 @@
   roles:
     - pre-install
     - workstation
+    - post-brew
 
 # Install GUI components
 - hosts: gui

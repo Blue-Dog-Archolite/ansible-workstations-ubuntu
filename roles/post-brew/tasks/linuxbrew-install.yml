@@ -1,5 +1,4 @@
 ---
-
 - name: Make LinuxBrew directory
   become: yes
   file:
@@ -19,7 +18,7 @@
 
 
 - name: Possible Solution
-  command: |
+  raw: |
     curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C /home/linuxbrew/.linuxbrew/
   args:
     chdir: /home/linuxbrew/
