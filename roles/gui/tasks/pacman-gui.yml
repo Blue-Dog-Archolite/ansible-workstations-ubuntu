@@ -1,13 +1,14 @@
 ---
-- name: Apt Installs GUI tools
+- name: Pacman Installs GUI tools
   become: yes
   pacman:
     state: present
     name:
       - clipit
       - gkrellm
-      # - gnome-do
-      # - google-chrome-stable
       - kdiff3
       - kleopatra
       - rhythmbox
+
+      # - gnome-do
+      # - google-chrome-stable
