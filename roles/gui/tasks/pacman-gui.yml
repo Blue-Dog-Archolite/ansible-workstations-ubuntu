@@ -1,8 +1,4 @@
 ---
-- name: Manually update apt-key until bus is fixed
-  shell: apt update
-  become: yes
-
 - name: Apt Installs GUI tools
   become: yes
   pacman:
