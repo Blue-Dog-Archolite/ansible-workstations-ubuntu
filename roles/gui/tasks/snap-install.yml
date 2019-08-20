@@ -6,16 +6,21 @@
     name: snapd
 
 - name: Install Slack via Snap
+  become: yes
   command: snap install slack --classic
 
 - name: Install Postman via Snap
+  become: yes
   command: snap install postman
 
 - name: Install Hiri via Snap
+  become: yes
   command: snap install hiri
 
 - name: Install VLC
+  become: yes
   command: snap install vlc
 
 - name: Install Signal
+  become: yes
   command: snap install signal-desktop

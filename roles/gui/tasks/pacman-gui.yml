@@ -9,6 +9,7 @@
       - kdiff3
       - kleopatra
       - rhythmbox
+      - snapd
 
       # - gnome-do
       # - google-chrome-stable
