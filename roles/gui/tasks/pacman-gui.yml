@@ -4,7 +4,8 @@
   pacman:
     state: present
     name:
-      - clipit
+      # - clipit
+
       - gkrellm
       - kdiff3
       - kleopatra

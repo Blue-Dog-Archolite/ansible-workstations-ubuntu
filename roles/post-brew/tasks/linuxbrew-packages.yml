@@ -17,10 +17,11 @@
 
       - asdf
       - black
+      - direnv
       - fzf
       - gcc
-      - z
+      - npm
       - pipenv
       - rbenv
       - ruby-build
-      - npm
+      - z
