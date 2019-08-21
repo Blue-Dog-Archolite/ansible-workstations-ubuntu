@@ -14,7 +14,7 @@
 - name: Create Vim2
   synchronize:
     src: "./pipfiles/vim2/"
-    dest: "{{ sharedInstallPath }}/tools/vim2/"
+    dest: "{{ sharedInstallPath }}/tools/vim2"
 
 - name: Install Vim2 Packages
   shell: |
@@ -24,7 +24,7 @@
 - name: Create Vim3
   synchronize:
     src: "./pipfiles/vim3/"
-    dest: "{{ sharedInstallPath }}/tools/vim3/"
+    dest: "{{ sharedInstallPath }}/tools/vim3"
 
 - name: Install Vim3 Packages
   shell: |
@@ -33,12 +33,12 @@
 
 - name: Symlink the directories for Vim3
   file:
-      src: "{{ sharedInstallPath }}/tools/vim3/"
-      dest: "~/tools/vim3/"
+      src: "{{ sharedInstallPath }}/tools/vim3"
+      dest: "~/tools/vim3"
       state: link
 
 - name: Symlink the directories for Vim2
   file:
       src: "{{ sharedInstallPath }}/tools/vim2/"
-      dest: "~/tools/vim2/"
+      dest: "~/tools/vim2"
       state: link
