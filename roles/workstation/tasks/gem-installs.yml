@@ -8,3 +8,13 @@
   gem:
     state: latest
     name: neovim
+
+- name: Root install of Homesick
+  gem:
+    state: latest
+    name: homesick
+
+- name: Root install of Tmuxinatior
+  gem:
+    state: latest
+    name: tmuxinator

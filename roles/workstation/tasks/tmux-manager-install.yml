@@ -3,3 +3,9 @@
   git:
     repo: 'https://github.com/tmux-plugins/tpm'
     dest: "{{sharedInstallPath}}/.tmux/plugins/tpm"
+
+- name: Symlink the directories for tmux plugin manager
+  file:
+    src: "{{sharedInstallPath}}/.tmux/plugins/tpm"
+    dest: "~/.tmux/plugins/tpm"
+    state: link

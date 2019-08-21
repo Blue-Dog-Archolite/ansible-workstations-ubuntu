@@ -30,3 +30,15 @@
   shell: |
     pipenv --three
     pipenv install
+
+- name: Symlink the directories for Vim3
+  file:
+      src: "{{ sharedInstallPath }}/tools/vim3/"
+      dest: "~/tools/vim3/"
+      state: link
+
+- name: Symlink the directories for Vim2
+  file:
+      src: "{{ sharedInstallPath }}/tools/vim2/"
+      dest: "~/tools/vim2/"
+      state: link
