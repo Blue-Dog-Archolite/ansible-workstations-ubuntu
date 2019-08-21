@@ -6,3 +6,9 @@
 
 - name: Install dein
   shell: "sh {{ sharedInstallPath }}/tools/dein_installer.sh {{ sharedInstallPath }}/tools/dein "
+
+- name: Symlink the directories for Dein
+  file:
+    src: "{{sharedInstallPath}}/tools/dein"
+    dest: "~/tools/dein"
+    state: link
