@@ -4,6 +4,11 @@
     repo: 'https://github.com/tmux-plugins/tpm'
     dest: "{{sharedInstallPath}}/.tmux/plugins/tpm"
 
+- name: Verify tmux plugin location
+  file:
+    path: "~/.tmux/plugins"
+    state: directory
+
 - name: Symlink the directories for tmux plugin manager
   file:
     src: "{{sharedInstallPath}}/.tmux/plugins/tpm"
