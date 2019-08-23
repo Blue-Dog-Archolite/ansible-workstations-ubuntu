@@ -5,7 +5,8 @@
     state: started
     name: snapd
 
-- name: Install Slack via Snap
+
+- name: Install slack
   become: yes
   command: snap install slack --classic
 

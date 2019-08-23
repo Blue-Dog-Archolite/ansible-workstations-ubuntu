@@ -1,4 +1,13 @@
 ---
+
+- name: Pacman add Herecura repo
+  become: yes
+  blockinfile:
+    path: /etc/pamac.conf
+    block: |
+      [herecura]
+      Server = https://repo.herecura.be/$repo/$arch
+
 - name: Pacman Installs
   become: yes
   pacman:

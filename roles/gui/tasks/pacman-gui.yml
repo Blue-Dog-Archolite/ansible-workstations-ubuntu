@@ -11,6 +11,9 @@
       - kleopatra
       - rhythmbox
       - snapd
+      - keybase
+      - kbfs
+      - keybase-gui
 
       # - gnome-do
       # - google-chrome-stable
