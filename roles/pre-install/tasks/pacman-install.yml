@@ -16,3 +16,4 @@
       - ca-certificates
       - curl
       - gnupg
+      - base-devel
