@@ -1,4 +1,4 @@
 ---
 - name: Download homesick for BDA
   shell: |
-    /home/rmeyer/.gem/ruby/2.6.0/bin/homesick clone Blue-Dog-Archolite/homestick-dot-files
+    /usr/local/bin/homesick clone Blue-Dog-Archolite/homestick-dot-files

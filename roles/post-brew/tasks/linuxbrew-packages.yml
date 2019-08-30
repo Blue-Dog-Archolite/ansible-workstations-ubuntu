@@ -25,3 +25,6 @@
       - rbenv
       - ruby-build
       - z
+      - ag
+      - rg
+      - nvim

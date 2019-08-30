@@ -19,6 +19,7 @@
     - name: Update pacman for Archlinux
       become: yes
       raw: pacman -Syy
+      when: ansible_distribution == "Archlinux"
 
     - name: 'Work around install aptitude'
       become: yes
