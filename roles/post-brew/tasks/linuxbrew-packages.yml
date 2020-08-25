@@ -15,16 +15,17 @@
     state: present
     name:
 
+      - ag
       - asdf
       - black
       - direnv
       - fzf
       - gcc
+      - k9s
       - npm
+      - nvim
       - pipenv
       - rbenv
+      - rg
       - ruby-build
       - z
-      - ag
-      - rg
-      - nvim
