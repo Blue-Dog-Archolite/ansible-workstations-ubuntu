@@ -1,4 +1,12 @@
 ---
+- name: Create shared directories
+  become: yes
+  file:
+    path: "{{ sharedInstallPath }}/tools/dein"
+    state: directory
+    mode: 0777
+    recurse: yes
+
 - name: Add Dein
   get_url:
     url: 'https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh'
