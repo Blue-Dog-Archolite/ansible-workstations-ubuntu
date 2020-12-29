@@ -7,7 +7,7 @@ for insall of a few Gonome and other display manager tools
 
 ## Runbook Steps
 - clone this repo to the machine you wish to ansible
-- execute `sh ansible-workstations-ubuntu/insntall.sh`
+- execute `sh ansible-workstations-ubuntu/install.sh`
 - Enjoy
 
 
