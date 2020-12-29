@@ -4,6 +4,7 @@
   apt:
     upgrade: dist
     update_cache: yes
+    when: ansisble_distribution != "Ubuntu"
 
 
 - name: Apt Installs
