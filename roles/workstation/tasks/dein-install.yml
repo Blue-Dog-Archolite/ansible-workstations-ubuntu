@@ -1,8 +1,16 @@
 ---
-- name: Create shared directories
+- name: Create directories for Dein
   become: yes
   file:
     path: "{{ sharedInstallPath }}/tools/dein"
+    state: directory
+    mode: 0777
+    recurse: yes
+
+- name: Create user directories for Dein
+  become: yes
+  file:
+    path: "$HOME/tools/dein"
     state: directory
     mode: 0777
     recurse: yes
