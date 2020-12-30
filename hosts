@@ -1,8 +1,8 @@
 [all]
-127.0.0.1 ansible_user=user
+127.0.0.1 ansible_user={{user}}
 
 [gui]
-127.0.0.1 ansible_user=rmeyer
+127.0.0.1 ansible_user={{user}}
 
 [all:vars]
 ansible_python_interpreter=/usr/bin/python3
