@@ -5,6 +5,14 @@
 #   register: brew_installed
 #   ignore_errors: True
 #
+- name: 'Brew install'
+  raw: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  when: ansible_distribution == "Ubuntu"
+
+- name: 'Add Brew to Path'
+  raw: echo 'eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)' >> /$HOME/.profile && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+  when: ansible_distribution == "Ubuntu"
+
 - name: Brew install needs system ruby and gcc
   raw: |
     brew vendor-install ruby
