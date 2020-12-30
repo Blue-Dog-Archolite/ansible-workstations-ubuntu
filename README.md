@@ -5,6 +5,11 @@ that I use in my day to day operations. Use of the `gui` flag allows
 for insall of a few Gonome and other display manager tools
 
 
+## Asumptions
+This assumes you have cloned this repo into a folder and it is created:
+/opt/ansible-up/tools
+
+
 ## Runbook Steps
 - clone this repo to the machine you wish to ansible
 - execute `sh ansible-workstations-ubuntu/install.sh`
