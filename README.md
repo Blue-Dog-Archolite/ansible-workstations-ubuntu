@@ -7,7 +7,7 @@ for insall of a few Gonome and other display manager tools
 
 ## Asumptions
 This assumes you have cloned this repo into a folder and it is created:
-/opt/ansible-up/tools
+~/tools
 
 
 ## Runbook Steps
