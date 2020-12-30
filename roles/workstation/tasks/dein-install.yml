@@ -10,7 +10,7 @@
 - name: Create user directories for Dein
   become: yes
   file:
-    path: "$HOME/tools/dein"
+    path: "~/tools/dein"
     state: directory
     mode: 0777
     recurse: yes
