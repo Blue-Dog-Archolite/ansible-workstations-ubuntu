@@ -14,8 +14,7 @@
   when: ansible_distribution == "Ubuntu"
 
 - name: Brew install needs system ruby and gcc
-  raw: |
-    brew vendor-install ruby
+  raw: brew vendor-install ruby
 
 - name: Install LinuxBrew items
   # when: brew_installed is True
