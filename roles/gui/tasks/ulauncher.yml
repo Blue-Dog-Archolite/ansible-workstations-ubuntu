@@ -1,0 +1,35 @@
+---
+- name: Apt Installs Dependencies
+  become: yes
+  apt: 
+    state: present
+    name:
+
+     - gconf-service 
+     - gconf-service-backend 
+     - gconf2-common 
+     - libappindicator1 
+     - libdbus-glib-1-2 
+     - libdbusmenu-glib4 
+     - libdbusmenu-gtk4 
+     - libgail-common 
+     - libgail18 
+     - libgconf-2-4 
+     - libgtk2.0-0 
+     - libgtk2.0-bin
+     - libgtk2.0-common 
+     - libnspr4 
+     - libnss3
+
+- name: Download Keybase
+  get_url:
+    url: 'https://prerelease.keybase.io/keybase_amd64.deb'
+    dest: "{{sharedInstallPath}}/tools/keybase.deb"
+
+- name: Install Keybase
+  shell: "dpkg -i {{sharedInstallPath}}/tools/keybase.deb"
+  become: yes
+
+- name: Update and Set Keybase
+  shell: "apt-get install -f"
+  become: yes

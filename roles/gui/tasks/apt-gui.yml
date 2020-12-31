@@ -19,3 +19,8 @@
       - lightdm
       - rhythmbox
       - ulauncher
+      - snapd
+
+- name: Install snapd
+  shell: "snap install snapd"
+  become: yes
