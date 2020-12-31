@@ -9,6 +9,10 @@ for insall of a few Gonome and other display manager tools
 This assumes you have cloned this repo into a folder and it is created:
 ~/tools and /opt/ansible-up/tools
 
+It also assumes that you have installed Ansible
+sudo apt-add-repository ppa:ansible/ansible
+sudo apt-get install ansible -y
+
 
 ## Runbook Steps
 - clone this repo to the machine you wish to ansible
