@@ -5,7 +5,7 @@
     upgrade: dist
     update_cache: yes
 
-- name: Apt Installs
+- name: Apt Installs Dependencies
   become: yes
   apt:
     state: present
@@ -15,3 +15,6 @@
       - curl
       - gnupg-agent
       - software-properties-common
+      - libappindicator1
+      - libgconf-2-4
+      - libnss3   

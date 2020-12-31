@@ -6,16 +6,16 @@
 - name: Apt Installs GUI tools
   become: yes
   apt:
-    state: present
+    state: absent
     name:
 
-      - cinnamon-desktop-environment
-      - clipit
-      - flameshot
-      - gkrellm
-      - google-chrome-stable
-      - kdiff3
-      - kleopatra
-      - lightdm
-      - rhythmbox
+            #- cinnamon-desktop-environment
+            #- clipit
+        #- flameshot
+        #- gkrellm
+        #- google-chrome-stable
+        #- kdiff3
+        #- kleopatra
+        #- lightdm
+        #- rhythmbox
       - ulauncher

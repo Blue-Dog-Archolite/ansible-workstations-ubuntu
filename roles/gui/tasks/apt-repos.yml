@@ -25,3 +25,13 @@
       state: present
       filename: docker-stable
       update_cache: yes
+
+- name: Add ulauncher 
+  become: yes
+  apt_repository:
+      repo: ppa:agornostal/ulauncher
+      #allow_unauthenticated: yes
+      validate_certs: no
+      state: present
+      update_cache: no
+      filename: ulauncher
