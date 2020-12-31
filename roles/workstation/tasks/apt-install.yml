@@ -20,12 +20,14 @@
       - git
       - htop
       - mlocate
+      - net-tools
       - python-dev
       - rbenv
       - ruby
       - ruby-dev
       - snapd
       - sysstat
+      - terminator
       - thefuck
       - tmux
       - vim
