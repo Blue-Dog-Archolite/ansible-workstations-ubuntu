@@ -11,7 +11,8 @@ This assumes you have cloned this repo into a folder and it is created:
 
 It also assumes that you have installed Ansible
 sudo apt-add-repository ppa:ansible/ansible
-sudo apt-get install ansible -y
+sudo apt update
+sudo apt install ansible -y
 
 
 ## Runbook Steps
