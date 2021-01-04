@@ -14,3 +14,4 @@
   when: ansible_distribution == "Ubuntu"
 
 - include_tasks: snap-install.yml
+  when: ansible_virtualization_type != "wsl"
