@@ -9,5 +9,6 @@
 - include_tasks: gem-installs.yml
 - include_tasks: tmux-manager-install.yml
 - include_tasks: setup-groups.yml
+- include_tasks: pipinstall.yml
 # - include_tasks: homesick-install.yml
 
