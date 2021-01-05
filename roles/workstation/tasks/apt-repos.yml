@@ -36,3 +36,4 @@
     state: present
     filename: yarn-deb
     update_cache: yes
+when: ansible_virtualization_type != "xen"
