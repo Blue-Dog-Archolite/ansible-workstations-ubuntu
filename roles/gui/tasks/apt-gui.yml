@@ -23,6 +23,6 @@
 - name: Install snapd
   shell: "snap install snapd"
   become: yes
-  when: ansible_virtualization_type != "wsl" or ansible_virtualization_type != "NA"
+  when: (ansible_facts['virtualization_type'] != "wsl") and (ansible_facts['virtualization_type'] != "NA")
   #Normally the virtualization type on wsl should say wsl but
   #I have seen it show "NA"
