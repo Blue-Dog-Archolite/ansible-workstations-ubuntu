@@ -5,9 +5,12 @@
 # change into directory
 # cd ansible-workstations-ubuntu
 
+sudo apt update -y
+
 # install python and pip
 sudo apt-get install python3.8
-python3 -m ensurepip --default-pip
+
+sudo apt-get install python3-pip -y
 
 #install git
 sudo apt install git

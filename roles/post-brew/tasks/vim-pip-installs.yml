@@ -1,4 +1,8 @@
 ---
+- name: Pip install pipenv
+  pip:
+    name: pipenv
+
 - name: Create Vim2 PipFile Locations
   file:
     path: "{{ sharedInstallPath }}/tools/vim2"
@@ -18,8 +22,8 @@
 
 - name: Install Vim2 Packages
   shell: |
-    pipenv --two
-    pipenv install
+    python3 -m pipenv --two 
+    python3 -m pipenv install
 
 - name: Create Vim3
   synchronize:
@@ -28,8 +32,8 @@
 
 - name: Install Vim3 Packages
   shell: |
-    pipenv --three
-    pipenv install
+    python3 -m pipenv --three
+    python3 -m pipenv install
 
 - name: Symlink the directories for Vim3
   file:

@@ -10,7 +10,7 @@
 - name: Create user directories for Dein
   become: yes
   file:
-    path: "~/tools/dein"
+    path: "/home/{{ ansible_facts['user_id'] }}/tools/dein"
     state: directory
     mode: 0777
     recurse: yes
@@ -26,5 +26,6 @@
 - name: Symlink the directories for Dein
   file:
     src: "{{sharedInstallPath}}/tools/dein"
-    dest: "~/tools/dein"
+    dest: "/home/{{ ansible_facts['user_id'] }}/tools/dein"
     state: link
+    force: yes

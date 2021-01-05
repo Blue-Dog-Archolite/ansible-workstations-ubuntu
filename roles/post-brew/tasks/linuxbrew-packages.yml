@@ -15,6 +15,7 @@
 - name: Install LinuxBrew items
   # when: brew_installed is True
   homebrew:
+    path: /home/linuxbrew/.linuxbrew/bin
     state: present
     name:
 
@@ -27,7 +28,6 @@
       - k9s
       - npm
       - nvim
-      - pipenv
       - rbenv
       - rg
       - ruby-build
