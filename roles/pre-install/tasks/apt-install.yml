@@ -4,6 +4,9 @@
   apt:
     upgrade: dist
     update_cache: yes
+  when: ansible_virtualization_type != "xen"
+  #xen is the virtualization used in aws
+  #this may need to be developed more in the future
 
 - name: Apt Installs Dependencies
   become: yes
