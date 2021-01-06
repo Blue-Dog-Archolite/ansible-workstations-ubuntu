@@ -6,3 +6,11 @@
     state: directory
     mode: 0777
     recurse: yes
+
+#- name: Create home directory for tools
+#  become: yes
+#  file:
+#    path: "~/tools/"
+#    state: directory
+#    mode: 0777
+#    recurse: yes

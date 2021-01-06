@@ -1,0 +1,31 @@
+---
+- name: Create directories for Dein
+  become: yes
+  file:
+    path: "{{ sharedInstallPath }}/tools/dein"
+    state: directory
+    mode: 0777
+    recurse: yes
+
+- name: Create user directories for Dein
+  become: yes
+  file:
+    path: "/home/{{ ansible_facts['user_id'] }}/tools/dein"
+    state: directory
+    mode: 0777
+    recurse: yes
+
+- name: Add Dein
+  get_url:
+    url: 'https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh'
+    dest: "{{ sharedInstallPath }}/tools/dein_installer.sh"
+
+- name: Install dein
+  shell: "sh {{ sharedInstallPath }}/tools/dein_installer.sh {{ sharedInstallPath }}/tools/dein "
+
+- name: Symlink the directories for Dein
+  file:
+    src: "{{sharedInstallPath}}/tools/dein"
+    dest: "/home/{{ ansible_facts['user_id'] }}/tools/dein"
+    state: link
+    force: yes

@@ -5,13 +5,17 @@
 #   register: brew_installed
 #   ignore_errors: True
 #
+- name: 'Brew install'
+  raw: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  when: ansible_distribution == "Ubuntu"
+
 - name: Brew install needs system ruby and gcc
-  raw: |
-    brew vendor-install ruby
+  raw: /home/linuxbrew/.linuxbrew/bin/brew vendor-install ruby
 
 - name: Install LinuxBrew items
   # when: brew_installed is True
   homebrew:
+    path: /home/linuxbrew/.linuxbrew/bin
     state: present
     name:
 
@@ -24,7 +28,6 @@
       - k9s
       - npm
       - nvim
-      - pipenv
       - rbenv
       - rg
       - ruby-build
