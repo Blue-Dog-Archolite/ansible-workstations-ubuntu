@@ -7,12 +7,12 @@ for insall of a few Gonome and other display manager tools
 
 ## Asumptions
 This assumes you have cloned this repo into a folder and it is created:
-~/tools and /opt/ansible-up/tools
+`~/tools` and `/opt/ansible-up/tools`
 
 It also assumes that you have installed Ansible
-sudo apt-add-repository ppa:ansible/ansible
-sudo apt update
-sudo apt install ansible -y
+- `sudo apt-add-repository ppa:ansible/ansible`
+- `sudo apt update`
+- `sudo apt install ansible -y`
 
 
 ## Runbook Steps
@@ -24,11 +24,11 @@ sudo apt install ansible -y
 ## Two Modes for Install
 
 ### GUI Workstation
-ansible-playbook main.yml -i ./hosts -c local --tags gui
+`ansible-playbook main.yml -i ./hosts -c local --tags gui`
 
 
 ### Terminal workstation
-ansible-playbook main.yml -i ./hosts -c local
+`ansible-playbook main.yml -i ./hosts -c local`
 
 
 #### Optional Use of password sudo
