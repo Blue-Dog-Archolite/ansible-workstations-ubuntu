@@ -21,3 +21,4 @@
       - libappindicator1
       - libgconf-2-4
       - libnss3   
+      - emacs-nox
