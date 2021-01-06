@@ -16,7 +16,7 @@ It also assumes that you have installed Ansible
 
 
 ## Runbook Steps
-- clone this repo to the machine you wish to ansible
+- clone this repo to the machine you wish to ansible `git clone https://github.com/janemiceli/ansible-workstations-ubuntu.git`
 - execute `sh ansible-workstations-ubuntu/install.sh`
 - Enjoy
 
