@@ -20,6 +20,8 @@
      - libgtk2.0-common 
      - libnspr4 
      - libnss3
+     #trying to shift from apt-get to apt
+     - install -f
 
 - name: Download Keybase
   get_url:
@@ -30,6 +32,6 @@
   shell: "dpkg -i {{sharedInstallPath}}/tools/keybase.deb"
   become: yes
 
-- name: Update and Set Keybase
-  shell: "apt-get install -f"
-  become: yes
+#- name: Update and Set Keybase
+#  shell: "apt-get install -f"
+#  become: yes

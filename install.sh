@@ -10,7 +10,7 @@ sudo apt update -y
 # install python and pip
 sudo apt-get install python3.8
 
-sudo apt-get install python3-pip -y
+sudo apt install python3-pip -y
 
 #install git
 sudo apt install git
