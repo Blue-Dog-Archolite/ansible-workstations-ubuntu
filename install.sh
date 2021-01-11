@@ -8,16 +8,11 @@
 sudo apt update -y
 
 # install python and pip
-sudo apt-get install python3.8
-
+sudo apt install python3.8
 sudo apt install python3-pip -y
 
-#install git
-sudo apt install git
-
-# Install ansible
-#pip3 install ansible
-sudo apt install ansible
+#install git and ansible
+sudo apt install -y git ansible 
 
 # verify working directory 
 cd ansible-workstations-ubuntu

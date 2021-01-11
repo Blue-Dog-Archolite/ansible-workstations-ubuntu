@@ -1,6 +1,6 @@
 # Ansible standup for GUI and ssh only workstations
 
-This is a collectionof ansible scripts that set up a chunk of packages
+This is a collection of ansible scripts that set up a chunk of packages
 that I use in my day to day operations. Use of the `gui` flag allows 
 for insall of a few Gonome and other display manager tools
 
@@ -17,8 +17,12 @@ sudo apt install ansible -y
 
 ## Runbook Steps
 - clone this repo to the machine you wish to ansible
-- execute `sh ansible-workstations-ubuntu/install.sh`
-- Enjoy
+- Option 1:
+    - run 'install.sh' if you need to install all prerequisites (Python/Ansible/Git)
+    `./install.sh`
+  Option 2:
+    - If you already ran 'install.sh' or have all the prerequisites installed, run the ansible playbook directly
+    `ansible-playbook main.yml -i ./hosts -c local -v --ask-become-pass`
 
 
 ## Two Modes for Install
