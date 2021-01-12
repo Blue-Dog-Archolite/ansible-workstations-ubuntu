@@ -1,9 +1,0 @@
----
-# This playbook prints a simple debug message
-- name: Echo 
-
-  tasks:
-  - name: Print debug message
-    debug:
-      msg: the user is {{ ansible_facts['user_id'] }} virtualization type {{ ansible_facts['virtualization_type'] }}
-

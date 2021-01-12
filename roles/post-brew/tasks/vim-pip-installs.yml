@@ -42,7 +42,7 @@
 
 - name: Install Vim2 Packages
   shell: |
-    python3 -m pipenv --two 
+    python3 -m pipenv --two
     python3 -m pipenv install
 #--
 - name: Create Vim3
