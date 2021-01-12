@@ -1,8 +1,8 @@
 ---
-- include_tasks: apt-repos1.yml
+- include_tasks: apt-repo-keys.yml
   when: ansible_distribution == "Ubuntu"
 
-- include_tasks: apt-repos2.yml
+- include_tasks: apt-repos.yml
   when: ansible_distribution == "Ubuntu" and ansible_virtualization_type != "xen"
 
 - include_tasks: apt-install.yml
