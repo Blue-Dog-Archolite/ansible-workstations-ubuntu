@@ -5,14 +5,17 @@
 # change into directory
 # cd ansible-workstations-ubuntu
 
-# install python and git
-sudo apt install python python-pip git curl -y
+sudo apt update -y
 
-# Install ansible
-pip install ansible
+# install python and pip
+sudo apt install python3.8
+sudo apt install python3-pip -y
 
-# verify working directory
-# cd ansible-workstations-ubuntu
+#install git and ansible
+sudo apt install -y git ansible 
+
+# verify working directory 
+cd ansible-workstations-ubuntu
 
 # Execute workstation install
 ansible-playbook main.yml -i ./hosts -c local

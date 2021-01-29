@@ -11,25 +11,23 @@
     state: present
     name:
 
-      - apt-transport-https
       - build-essential
-      - ca-certificates
       - clamav
       - clamtk
       - ctags
-      - curl
       - fish
       - fonts-powerline
       - git
       - htop
       - mlocate
+      - net-tools
       - python-dev
       - rbenv
       - ruby
       - ruby-dev
       - snapd
-      - software-properties-common
       - sysstat
+      - terminator
       - thefuck
       - tmux
       - vim

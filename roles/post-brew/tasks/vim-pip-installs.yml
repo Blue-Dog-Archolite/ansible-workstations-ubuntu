@@ -1,4 +1,8 @@
 ---
+- name: Pip install pipenv
+  pip:
+    name: pipenv
+#------
 - name: Create Vim2 PipFile Locations
   file:
     path: "{{ sharedInstallPath }}/tools/vim2"
@@ -10,27 +14,55 @@
     path: "{{ sharedInstallPath }}/tools/vim3"
     state: directory
     recurse: yes
+#--
+- name: Create emacs2 PipFile Locations
+  file:
+    path: "{{ sharedInstallPath }}/tools/emacs2"
+    state: directory
+    recurse: yes
 
+- name: Create emacs3 PipFile Locations
+  file:
+    path: "{{ sharedInstallPath }}/tools/emacs3"
+    state: directory
+    recurse: yes
+#------
 - name: Create Vim2
   synchronize:
     src: "./pipfiles/vim2/"
     dest: "{{ sharedInstallPath }}/tools/vim2"
 
+- name: Create emacs2
+  synchronize:
+    src:  "./pipfiles/vim2/"
+    dest: "{{ sharedInstallPath }}/tools/emacs2"
+#I am not sure on the best src location, as "./pipfiles/emacs/" doesn't exist
+#This may need to be developed more or changed completely
+#
+
 - name: Install Vim2 Packages
   shell: |
-    pipenv --two
-    pipenv install
-
+    python3 -m pipenv --two
+    python3 -m pipenv install
+#--
 - name: Create Vim3
   synchronize:
     src: "./pipfiles/vim3/"
     dest: "{{ sharedInstallPath }}/tools/vim3"
 
+- name: Create emacs3
+  synchronize:
+    src: "./pipfiles/vim3/"
+    dest: "{{ sharedInstallPath }}/tools/emacs3"
+#I am not sure on the best src location, as "./pipfiles/emacs/" doesn't exist
+#This may need to be developed more or changed completely
+#
+
 - name: Install Vim3 Packages
   shell: |
-    pipenv --three
-    pipenv install
-
+    python3 -m pipenv --three
+    python3 -m pipenv install
+#-------
 - name: Symlink the directories for Vim3
   file:
       src: "{{ sharedInstallPath }}/tools/vim3"
@@ -41,4 +73,16 @@
   file:
       src: "{{ sharedInstallPath }}/tools/vim2/"
       dest: "~/tools/vim2"
+      state: link
+
+- name: Symlink the directories for emacs3
+  file:
+      src: "{{ sharedInstallPath }}/tools/emacs3"
+      dest: "~/tools/emacs3"
+      state: link
+
+- name: Symlink the directories for emacs2
+  file:
+      src: "{{ sharedInstallPath }}/tools/emacs2/"
+      dest: "~/tools/emacs2"
       state: link

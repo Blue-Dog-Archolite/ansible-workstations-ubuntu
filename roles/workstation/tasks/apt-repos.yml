@@ -1,16 +1,4 @@
 ---
-- name: Add Nodesource Keys
-  become: yes
-  apt_key:
-    url: https://deb.nodesource.com/gpgkey/nodesource.gpg.key
-    state: present
-
-- name: Add Yarn Key
-  become: yes
-  apt_key:
-    url: https://dl.yarnpkg.com/debian/pubkey.gpg
-    state: present
-
 - name: Add Node 12 deb
   become: yes
   apt_repository:
@@ -18,6 +6,7 @@
     state: present
     filename: node-12
     update_cache: yes
+  when: ansible_virtualization_type != "xen"
 
 - name: Add Node 12 deb-src
   become: yes
@@ -26,6 +15,7 @@
     state: present
     filename: node-12-src
     update_cache: yes
+  when: ansible_virtualization_type != "xen"
 
 - name: Add Yarn deb
   become: yes
@@ -34,3 +24,4 @@
     state: present
     filename: yarn-deb
     update_cache: yes
+  when: ansible_virtualization_type != "xen"

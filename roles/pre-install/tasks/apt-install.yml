@@ -4,9 +4,11 @@
   apt:
     upgrade: dist
     update_cache: yes
+  #when: ansible_virtualization_type != "xen"
+  #xen is the virtualization used in aws
+  #this may need to be developed more in the future
 
-
-- name: Apt Installs
+- name: Apt Installs Dependencies
   become: yes
   apt:
     state: present
@@ -16,3 +18,7 @@
       - curl
       - gnupg-agent
       - software-properties-common
+      - libappindicator1
+      - libgconf-2-4
+      - libnss3   
+      - emacs-nox

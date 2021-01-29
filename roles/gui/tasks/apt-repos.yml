@@ -25,3 +25,9 @@
       state: present
       filename: docker-stable
       update_cache: yes
+
+- name: apt-repo - ULauncher
+  become: yes
+  apt_repository:
+      repo: ppa:agornostal/ulauncher
+      state: present

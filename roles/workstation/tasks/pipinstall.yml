@@ -1,0 +1,4 @@
+---
+- name: Install Harvest APIfor python
+  pip:
+    name: harvest_api
